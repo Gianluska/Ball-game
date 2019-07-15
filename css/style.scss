@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+canvas {
+    border: solid 1px #000;
+    background-color: #f5f5f5;
+}
+
+.scoreboard__container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #130e1d;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 16px -6px rgba(0, 0, 0, 0.75);
+
+    .scoreboard {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 50%;
+
+        .lifes {
+            display: flex;
+            padding: 18px 0;
+            align-items: center;
+
+            h1 {
+                font-size: 1em;
+                padding-right: 5px;
+            }
+
+            p {
+                font-weight: 600;
+            }
+        }
+
+        .waves {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+                font-size: 1em;
+                padding-right: 5px;
+            }
+
+            p {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.modal {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(6, 5, 14, 0.637);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .modal__card {
+        width: 500px;
+        height: 300px;
+        background-color: rgba(6, 5, 14, 0.719);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 6px;
+        box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.45);
+
+        p {
+            font-size: .90em;
+        }
+
+        a {
+            margin-top: 60px;
+            padding: 12px 64px;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: .9em;
+        }
+    }
+
+    &.modal__nextwave {
+        .modal__card {
+            h2 {
+                color: #00e676;
+            }
+        }
+    }
+
+    &.modal__gameover {
+        display: none;
+
+        .modal__card {
+            h2 {
+                color: #ff1744;
+            }
+        }
+    }
+}

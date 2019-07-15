@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+    <title>Canvas</title>
+</head>
+
+<body>
+    <canvas class="game"></canvas>
+
+    <section class="scoreboard__container">
+        <div class="scoreboard">
+            <div class="waves">
+                <h1 onclick="pushPopOnArray(false)">Wave:</h1>
+                <p class="wave"></p>
+            </div>
+            <div class="lifes">
+                <h1>Lifes:</h1>
+                <p class="life"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="modal modal__nextwave">
+        <div class="modal__card">
+            <h2>Voce passou para a proxima wave!</h2>
+            <p>Suas vidas foram resetadas!</p>
+            <a class="btn btn__nextwave">Continuar</a>
+        </div>
+    </section> -->
+
+    <section class="modal modal__gameover">
+        <div class="modal__card">
+            <h2>Game Over</h2>
+            <p>Tente novamente!</p>
+            <a onclick="pushPopOnArray(true)" class="btn btn__gameover">Reiniciar</a>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
